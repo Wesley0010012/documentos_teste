@@ -1,0 +1,22 @@
+Implementação de Data Transfer Objects.
+
+Cada serviço, assim como cada endpoint pode ter seus objetos de transferência de dados únicos. A sua implementação entretanto, deve ao mínimo respeitar três tipos de objetos de transferência de dados obrigatórios:
+- Dto de Entrada (InputDto): este Dto é responsável pela conversão dos dados de entrada em um objeto do qual o sistema possa entender a nível funcional;
+- Dto de Consulta (QueryDto): este Dto é responsável por tratar e generalizar os dados recebidos na entrada. Ele ainda, é utilizado para as operações do sistema;
+- Dto de saída (OutputDto): este Dto é responsável por receber os dados de saída da operação do sistema. Ele será o objeto de tratamento durante a saída, da qual ainda será convertida em resposta para o cliente.
+
+- Implementação de Adaptadores de entrada (Parsers Adapters).
+
+Os adaptadores de entrada, também defindios como parsers adapters, são os adaptadores responsáveis por converter as requisições vindas diretamente do sistema em um objeto funcional, denominado Dto de entrada (InputDto). 
+
+- Implementação de Interceptadores de rotas (Route Interceptors):
+
+Os interceptadores de rotas, são os objetos responsáveis pela execução própriamente das rotas. A preferência de tratar a execução diretamente deles decorre do fato da utilização de adaptadores de entrada, dos quais assim possibilita que apenas a execução de casos de uso seja destinada ao controlador. Outro motivo, é a facilidade de controlar eventos de pré e pós execução.
+
+- Implementação de casos de uso (Use Cases):
+
+Os casos de uso são as implementações responsáveis pela execução diretamente das requisições dos clientes, de quaisquer serviços. Eles são distinguíveis em três tipos de casos de uso:
+- Casos de uso de execução síncrona: são os casos de uso que fazem a execução diretamente
+
+
+
